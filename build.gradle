@@ -1,5 +1,15 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath "com.github.jengelman.gradle.plugins:shadow:1.1.1"
+	}
+}
+
 apply plugin: "groovy"
 apply plugin: "idea"
+apply plugin: "com.github.johnrengelman.shadow"
 
 repositories {
 	mavenCentral()
@@ -14,6 +24,12 @@ dependencies {
 
 sourceCompatibility = "1.6"
 targetCompatibility = "1.6"
+
+jar {
+    manifest {
+        attributes "Main-Class": "org.lptr.otp2qif.Otp2QifGui"
+    }
+}
 
 task wrapper(type: Wrapper) {
     gradleVersion = "2.0"
