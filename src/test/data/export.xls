@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="iso-8859-2"?> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40" lang="hu">
+
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+    <title>OTP Direkt</title>	
+	<meta http-equiv="CACHE-CONTROL" content="NO-STORE" />
+    <meta content='application/vnd.ms-excel; charset=ISO-8859-2' http-equiv='Content-type' />
+    <meta name='ProgId' content='Excel.Sheet' />	
+    
+
+    <style type="text/css">
+ 
+    <!--
+
+
+		body {
+			/* default font beállítások */
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 10pt;
+		}
+		
+		h1 {
+			font-size: 1.4em;
+		}
+
+        table {
+        	empty-cells: show;
+        	mso-displayed-decimal-separator:"\,";
+            mso-displayed-thousand-separator:" ";
+       	}
+
+        tr {
+        	mso-height-source:auto;
+        }
+       
+        th {
+        	border: thin #CCCCCC solid;        
+        	vertical-align: top;
+        }
+        
+        td {
+        	border: thin #CCCCCC solid;
+        	vertical-align: top;
+        }
+        
+        col {
+        	mso-width-source:auto;
+        }
+        
+        br {
+        	mso-data-placement:same-cell;
+        }
+        
+        .excel_no_format {
+        	mso-style-parent:style0;
+            mso-number-format:"\@";
+            text-align:left;
+            white-space:normal;
+        }
+            
+        .numerikus {
+			vnd.ms-excel.numberformat:0;
+			text-align: right;
+        }
+        
+        table.allapot_informacio th {
+        	text-align: left;
+        }
+        
+        img {
+        	display: none;
+        }
+        
+        input {
+        	display: none;
+        }
+
+    -->
+    </style>
+</head>	
+<body>
+
+	<h1>		
+		Számlatörténet
+	</h1>
+	
+	<div id="content">
+		
+
+			
+			<!-- tranzakcios oldal -->
+			
+			<!-- hibauzenetek -->
+			
+			
+			
+			    
+			<!-- end hibauzenetek -->
+			
+			<!-- fix adatok -->
+			
+				
+			
+			<!-- end fix adatok -->
+			
+			<!-- eredmeny adatok -->
+			
+			      
+			        
+			        
+
+
+
+<br/>
+
+	
+		
+		 
+		
+		
+
+
+
+ 
+
+
+	<table>
+		<tr>
+			<td>Számlaszám</td>
+			<td>22945670-13634567</td>
+		</tr>
+		<tr>
+			<td>Devizanem</td>
+			<td>HUF</td>
+		</tr>
+		<tr>
+			<td>Számla elnevezése</td>
+			<td>ALABÁRDOS LAJOS</td>
+		</tr>
+		<tr>
+			<td>Rendelkezésre álló egyenleg</td>
+			<td class="numerikus">
+				
+					
+						-179 702
+					
+					
+					
+				
+			</td>
+		</tr>
+		<tr>
+			<td>Lekérdezés időpontja</td>
+			<td>2014.09.07. 10:13</td>
+		</tr>
+		<tr>
+			<td>Lekérdezés kezdete</td>
+			<td>2014.08.24.</td>
+		</tr>
+		<tr>
+			<td>Lekérdezés vége</td>
+			<td>2014.09.07.</td>
+		</tr>
+	</table>
+	<br/>
+	
+    
+    
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    		
+    	
+    
+    <br/>
+    <table class="allapot_informacio">
+    <tr >
+        <th >
+            Szűrési feltétel
+        </th>
+        <td >
+           	Forgalom típusa:&nbsp;Mind<br/>
+            Ellenoldali számlaszám:&nbsp;
+        </td>
+    </tr>
+    </table>
+    <br/>
+    
+    
+    
+	    
+	    
+
+		    <table class="eredmenytabla">
+				<thead>
+			        <tr>
+			            <th width="35">&nbsp;</th>
+			            <th nowrap="nowrap" width="235">Forgalom típusa</th>
+			            <th nowrap="nowrap" width="115">Könyvelési dátum</th>
+			            <th nowrap="nowrap" width="80">Értéknap</th>
+			            <th nowrap="nowrap" width="115">Összeg</th>
+			            <th nowrap="nowrap" width="130">Új könyvelt egyenleg</th>
+			            <th nowrap="nowrap" >Ellenoldali számlaszám</th>
+			            <th nowrap="nowrap" >Ellenoldali név</th>
+			            <th nowrap="nowrap">Közlemény</th>
+			        </tr>
+		        </thead>
+				<tbody>
+					
+						<tr>
+			            	<td nowrap="nowrap" align="right">1.</td>
+			                <td nowrap="nowrap" >724.288 HITELTÖRLESZTÉS EGYÉB&nbsp;</td>
+			                <td nowrap="nowrap" >2014.08.28.&nbsp;</td>
+			                <td nowrap="nowrap" >2014.08.28.&nbsp;</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">0</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-187491</td>
+			                <td nowrap="nowrap" >&nbsp;</td>
+			                <td nowrap="nowrap" >OTP BANK NYRT.&nbsp;</td>
+			                <td nowrap="nowrap" >&nbsp;&nbsp;5739457943759873489&nbsp;</td>
+			            </tr>
+					
+						<tr>
+			            	<td nowrap="nowrap" align="right">2.</td>
+			                <td nowrap="nowrap" >NAPKÖZBENI ÁTUTALÁS&nbsp;</td>
+			                <td nowrap="nowrap" >2014.08.28.&nbsp;</td>
+			                <td nowrap="nowrap" >2014.08.28.&nbsp;</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">33980</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-153511</td>
+			                <td nowrap="nowrap" >22945670-13634533-33180003&nbsp;</td>
+			                <td nowrap="nowrap" >BELA Bt.&nbsp;</td>
+			                <td nowrap="nowrap" >00000000000000000000000000000000016&nbsp;&nbsp;&nbsp;</td>
+			            </tr>
+					
+						<tr>
+			            	<td nowrap="nowrap" align="right">3.</td>
+			                <td nowrap="nowrap" >VÁSÁRLÁS KÁRTYÁVAL&nbsp;</td>
+			                <td nowrap="nowrap" >2014.08.28.&nbsp;</td>
+			                <td nowrap="nowrap" >2014.08.28.&nbsp;</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-19900</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-173411</td>
+			                <td nowrap="nowrap" >&nbsp;</td>
+			                <td nowrap="nowrap" >&nbsp;</td>
+			                <td nowrap="nowrap" >SERVICE COMPANY&nbsp;&nbsp;2014.08.26 74274923744&nbsp;</td>
+			            </tr>
+					
+						<tr>
+			            	<td nowrap="nowrap" align="right">4.</td>
+			                <td nowrap="nowrap" >OTTHONBIZT.EGYÉNI&nbsp;</td>
+			                <td nowrap="nowrap" >2014.09.01.&nbsp;</td>
+			                <td nowrap="nowrap" >2014.09.01.&nbsp;</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-946</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-174357</td>
+			                <td nowrap="nowrap" >&nbsp;</td>
+			                <td nowrap="nowrap" >ABC BT.&nbsp;</td>
+			                <td nowrap="nowrap" >whfui 47593475894354&nbsp;&nbsp;47573489759843795534344&nbsp;</td>
+			            </tr>
+					
+						<tr>
+			            	<td nowrap="nowrap" align="right">5.</td>
+			                <td nowrap="nowrap" >VILLAMOSENERGIA DÍJ&nbsp;</td>
+			                <td nowrap="nowrap" >2014.09.01.&nbsp;</td>
+			                <td nowrap="nowrap" >2014.09.01.&nbsp;</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-6458</td>
+			                <td nowrap="nowrap" align="right" style="vnd.ms-excel.numberformat:#,##0.00">-180815</td>
+			                <td nowrap="nowrap" >&nbsp;</td>
+			                <td nowrap="nowrap" >BUDAPESTI ELEKTROMOS MŰVEK NYRT.&nbsp;</td>
+			                <td nowrap="nowrap" >7537495789&nbsp;&nbsp;53987454835&nbsp;</td>
+			            </tr>
+					
+				</tbody>
+		    </table>
+		
+	
+
+		 
+	
+	
+	
+
+
+			        
+			
+			            
+			
+			
+			<!-- end eredmeny adatok -->
+			
+			
+			
+			
+			
+			<!-- info -->
+			                
+			                                  
+			
+			<!-- end info -->
+			
+			<!-- end tranzakcios oldal -->
+				 
+		
+	</div>
+	
+	</body>
+
+</html>
