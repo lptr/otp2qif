@@ -65,7 +65,7 @@ public class Otp2Qif {
 		SimpleDateFormat quickenDateFormat = new SimpleDateFormat("yyyy.MM.dd");
 		for (int i = 0; i < rows.getLength(); i++) {
 			Node row = (Node) rows.item(i);
-			String title = xPath.evaluate("td[2]", row).trim();
+			String transferType = xPath.evaluate("td[2]", row).trim();
 			Date bookingDate = excelDateFormat.parse(xPath.evaluate("td[3]", row).trim());
 			Date transactionDate = excelDateFormat.parse(xPath.evaluate("td[4]", row).trim());
 			BigDecimal amount = new BigDecimal(xPath.evaluate("td[5]", row).trim());
@@ -77,11 +77,11 @@ public class Otp2Qif {
 			result.append('D').append(quickenDateFormat.format(transactionDate)).append('\n');
 			result.append('T').append(amount.toPlainString()).append('\n');
 			result.append('P').append(otherName).append('\n');
-			result.append('M');
+			result.append('M').append(transferType);
 			if (!Strings.isNullOrEmpty(otherAccount)) {
-				result.append(otherAccount).append(' ');
+				result.append(' ').append(otherAccount);
 			}
-			result.append(comment);
+			result.append(' ').append(comment);
 			result.append('\n');
 			result.append("^\n");
 		}
