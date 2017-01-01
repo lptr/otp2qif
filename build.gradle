@@ -16,21 +16,20 @@ repositories {
 }
 
 dependencies {
-	compile "com.google.guava:guava:18.0"
-	testCompile "org.spockframework:spock-core:0.7-groovy-2.0"
-	// Override the one from Spock
-	testCompile "org.codehaus.groovy:groovy-all:2.3.3"
+	compile "com.google.guava:guava:19.0"
+	testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
+	testCompile "org.codehaus.groovy:groovy-all:2.4.7"
 }
 
-sourceCompatibility = "1.6"
-targetCompatibility = "1.6"
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
+
+tasks.withType(AbstractCompile) {
+	options.encoding = 'UTF-8'
+}
 
 jar {
     manifest {
         attributes "Main-Class": "org.lptr.otp2qif.Otp2QifGui"
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = "2.0"
 }
