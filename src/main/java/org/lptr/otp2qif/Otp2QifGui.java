@@ -1,10 +1,15 @@
 package org.lptr.otp2qif;
 
+import com.google.common.base.Joiner;
+import com.google.common.collect.Lists;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.filechooser.FileFilter;
 import java.awt.event.ActionEvent;
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.util.Arrays;
+import java.util.List;
 
 public class Otp2QifGui {
 	private static void createAndShowGUI() {
@@ -15,26 +20,40 @@ public class Otp2QifGui {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser sourceChooser = new JFileChooser();
-				sourceChooser.setDialogTitle("Choose an OTP file to convert");
+				sourceChooser.setMultiSelectionEnabled(true);
+				sourceChooser.setFileFilter(new FileFilter() {
+					@Override
+					public boolean accept(File f) {
+						return f.getName().endsWith(".xls");
+					}
+
+					@Override
+					public String getDescription() {
+						return "*.xls (Excel files)";
+					}
+				});
+				sourceChooser.setDialogTitle("Choose an OTP files to convert");
 				if (sourceChooser.showDialog(frame, "Choose") == JFileChooser.APPROVE_OPTION) {
-					JFileChooser targetChooser = new JFileChooser();
-					targetChooser.setDialogTitle("Choose where to save the QIF export");
-					if (targetChooser.showDialog(frame, "Save") == JFileChooser.APPROVE_OPTION) {
+					List<File> sources = Arrays.asList(sourceChooser.getSelectedFiles());
+					List<File> converted = Lists.newArrayList();
+					for (File source : sources) {
 						try {
-							File source = sourceChooser.getSelectedFile();
-							File target = targetChooser.getSelectedFile();
-							if (!target.exists()
-									|| JOptionPane.showConfirmDialog(frame, "Can I overwrite " + target + "?", "Overwrite file", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
-								Otp2Qif.convert(source, target);
-								JOptionPane.showMessageDialog(frame, "File successfully converted to: " + source);
+							File target = new File(source.getParentFile(), source.getName() + ".qif");
+							if (target.exists()
+									&& JOptionPane.showConfirmDialog(frame, "Can I overwrite " + target + "?", "Overwrite file", JOptionPane.YES_NO_OPTION) != JOptionPane.YES_OPTION) {
+								continue;
 							}
-						} catch (FileNotFoundException ex) {
-							ex.printStackTrace();
-							JOptionPane.showMessageDialog(frame, "Cannot find file: " + ex, "Error", JOptionPane.ERROR_MESSAGE);
+							Otp2Qif.convert(source, target);
+							converted.add(target);
 						} catch (Exception ex) {
 							ex.printStackTrace();
-							JOptionPane.showMessageDialog(frame, "Something went wrong: " + ex, "Error", JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(frame, String.format("Something went wrong with '%s': %s", source, ex), "Error", JOptionPane.ERROR_MESSAGE);
 						}
+					}
+					if (converted.isEmpty()) {
+						JOptionPane.showMessageDialog(frame, "Did not convert anything");
+					} else {
+						JOptionPane.showMessageDialog(frame, "Files successfully converted:\n\n - " + Joiner.on("\n - ").join(converted));
 					}
 				}
 			}
